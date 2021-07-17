@@ -32,8 +32,4 @@ for payer in payers:
             payer_df.at[index, 'your share'] = float(+1 * float(row['amount']) / quotient)
             balance = balance + float(row['amount']) / quotient
     payer_df.at[0, 'balance'] = balance
-    print(payer)
-    print(payer_df.to_string())
-    print('balance= '+str(balance))
     payer_df.to_csv(str(payer)+'.csv')
-print('***')
